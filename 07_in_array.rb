@@ -17,5 +17,10 @@
 #Don't use any helpers other than .each
 #Try writing it on a whiteboard or paper first
 def in_array (needle, haystack)
-  # Your code here
+  
+  haystack.each {|x|return true if x == needle}
+  false
+
 end
+
+# in_array("hello"["hello", "hi", "yo"])
