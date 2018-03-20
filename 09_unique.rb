@@ -19,5 +19,11 @@
 #
 
 def unique (mylist)
-  # Your code here
+
+  # mylist & mylist  <---- This is the one line version!
+
+  new_array = []
+  mylist.each {|x| new_array.push(x) if !new_array.include?(x)}
+  new_array
+  
 end
