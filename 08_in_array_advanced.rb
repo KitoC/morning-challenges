@@ -20,21 +20,20 @@
 #
 #Don't use any helpers other than .each
 #Try writing it on a whiteboard or paper first
+
 def in_array_advanced (needle, haystack, strict)
-  # final = false
-  n = false
-  haystack.each do |x|
-    if x == needle
-      n = true
 
-    elsif x == needle.downcase
-      n = true
-    end
-  end
-    n
+# if strict == false
+#   haystack.each{|x| return true if needle.downcase == x.downcase}
+#   false
+# else
+#   haystack.each{|x| return true if needle == x}
+#   false
+#
 
-
-
+needle.downcase! if strict == false
+  haystack.each{|x| return true if needle == x}
+  false
 
 
 end
