@@ -21,5 +21,24 @@
 #
 
 class Dictionary
-  # Your code here
+
+
+  def initialize
+    @@dictionary = {}
+    @@word_count = 0
+  end
+
+  def add_word(word, definition)
+    @@dictionary[word] = definition
+    @@word_count += 1
+  end
+
+  def lookup(word)
+    @@dictionary[word]
+  end
+
+  def total_words
+    puts @@dictionary
+    @@word_count
+  end
 end
