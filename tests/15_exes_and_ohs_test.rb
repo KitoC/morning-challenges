@@ -15,7 +15,7 @@ class IncludedOnceTest < Test::Unit::TestCase
     assert_equal(true, ExesAndOhs("oOxXxoXo"))
   end
   def test_case_insensitive_unbalanced
-    assert_equal(false, ExesAndOhs("oOxXxoX"))
+    assert_equal(false, ExesAndOhs("oOxXxoX"*1000000))
   end
   def test_zero_count
     assert_equal(true, ExesAndOhs("zpzpzpp"))
