@@ -23,5 +23,24 @@
 #
 
 def ExesAndOhs(string)
-  # yo' co' here
+  
+#First attempt SOLVED
+  # array = string.split('')
+  # hash = {x: 0, o: 0}
+  # array.each do |xo|
+  #   if xo.downcase == 'x'
+  #     hash[:x] += 1
+  #   end
+  #   if xo.downcase == "o"
+  #     hash[:o] += 1
+  #   end
+  # end
+  # return true if hash[:o] == hash[:x]
+  # false
+
+#Second attempt SOLVED
+string_array = string.downcase.scan(/\w/)
+return true if string_array.count('o') == string_array.count('x')
+false
+
 end
