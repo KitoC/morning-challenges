@@ -1,4 +1,6 @@
 #
+require 'net/http'
+require 'uri'
 # Page Title
 #
 # Write a method that takes a URL and
@@ -12,6 +14,13 @@
 # ruby tests/16_page_title_test.rb
 #
 
+
+
 def pageTitle(url)
-  # your code here
+
+   page_content = Net::HTTP.get(URI.parse(url))
+   titlefind = /<title>(.*)<\/title>/.match(page_content)
+   return titlefind[1]
+
 end
+# pageTitle('http://www.google.com.au/?gfe_rd=cr&amp;dcr=0&amp;ei=WCe8WsKlJ6fM8geTw6GIDA')
