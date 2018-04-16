@@ -11,3 +11,30 @@
 # Let the tests help you :)
 # ruby tests/17_group_fives_test.rb
 #
+
+
+def divisible_by_five(number)
+    if  number % 5 == 0
+      return true
+    else
+      return false
+    end
+end
+
+def group_fives(numbers)
+  fives = []
+  non_fives = []
+  arr_together = []
+  numbers.each do |number|
+    if number % 5 == 0
+      fives.push(number)
+    else
+      non_fives.push(number)
+    end
+  end
+  arr_together.push(fives)
+  arr_together.push(non_fives)
+  return arr_together
+end
+# numbers = [9, 4, 25, 3, 5, 30, 2, 8, 10, 100]
+# group_fives(numbers)
